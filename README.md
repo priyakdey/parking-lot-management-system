@@ -26,6 +26,8 @@ look at the example below, which includes all the commands you need to support -
 explanatory. The system should accept a filename as a parameter at the command prompt and read the
 commands from that file.
 
+---
+
 
 ### Installation
 
@@ -39,10 +41,27 @@ To run the application from the cmd-line so that it accepts a file:
 $ bin/parking_lot_file ;file_inputs.txt
 ```
 
+---
+
 
 ### Commands
 - Create a parking lot of size n: create_parking_lot $capacity
 - Park a car: park $reg_num
 - Unpark car: leave $reg_num $hours
 - Get status of car at any given time: status
--
+
+
+---
+
+
+### Assumptions
+
+
+Below are the assumptions made while desigining the application
+
+- It is a single floor parking lot
+- The parking spaces are of the same type (no special parking/bike parking/etc)
+- It is a single entry-exit parking lot, hence removing any concurrent entry
+- There is no waiting queue. In case of full, the next incoming car is said 'bye !'
+
+
